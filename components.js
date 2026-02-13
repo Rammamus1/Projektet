@@ -29,11 +29,22 @@ class CustomFooter extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <footer>
-            <span>This is a temporary footer</span>
+            <span class="footer-description">
+            This is a fanmade appreciation website of Shawn Mendes made as a programming assignment for us students at KTH, Royal Institute of Technology.
+            </span>
         </footer>
+        `
+    }
+};
+
+class AboutSection extends HTMLElement{
+    connectedCallback() {
+        this.innerHTML = `
+        <p>yabababababababab</p>
         `
     }
 };
 
 customElements.define("custom-navbar", CustomNavbar);
 customElements.define("custom-footer", CustomFooter);
+customElements.define("about", AboutSection);

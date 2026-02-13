@@ -81,3 +81,11 @@ footer{
     background: var(--main-col);
     height: 35vh;
 }
+
+.footer-description{
+    width: 30vh;
+    word-wrap: break-word;
+    display: flex;
+    text-align: center;
+    height: 33vh;
+}
