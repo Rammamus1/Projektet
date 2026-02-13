@@ -1,0 +1,56 @@
+<html>
+<head>
+<body>
+<meta name="viewport" charset="utf-8" lang="En" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="MerchKlass.css">
+
+
+<h1 class="unbold roboto_font">
+    Merch Page
+</h1>
+
+<div class="container roboto_font">
+<div> nihao </div>
+</div>
+
+
+<script type = "text/javascript">
+class Item
+{
+    // Klassen item används till varje sak som Shawn säljer i sin shop.
+    constructor(price, shirt, hoodie, skiva, disc, link, image, name)
+    {
+        this.price = price;
+        this.shirt = shirt;
+        this.hoodie = hoodie;
+        this.disc = disc;
+        this.link = link;
+        this.image = image;
+        this.name = name;
+    }
+}
+
+function createItems() {
+    merch = []
+    merch[0] = new Item(45.00, true, false, false, "https://shop.shawnmendesofficial.com/products/white-heart-tour-tee", "shirt 1.jpg", "WHITE HEART TOUR TEE")
+    merch[1] = new Item(70.00, false, true, false, "https://shop.shawnmendesofficial.com/products/w-hoodie-i", "hoodie 1.jpg", "W HOODIE I")
+    merch[2] = new Item(60.00, false, true, false, "https://shop.shawnmendesofficial.com/products/winter-floral-02-hoodie", "hoodie 2.jpg", "WINTER FLORAL 02 HOODIE")
+    merch[3] = new Item(5.00, false, false, true, "https://shop.shawnmendesofficial.com/collections/vintage-shop/products/if-i-can-t-have-you-cd-i", "cd 1.jpg", "If I Cant Have You CD I")
+    merch[4] = new Item(13.98, false, false, true, "https://shop.shawnmendesofficial.com/collections/vintage-shop/products/shawn-mendes-cd", "cd 2.jpg", "Shawn Mendes CD")
+    merch[5] = new Item(40.00, true, true, false, "https://shop.shawnmendesofficial.com/collections/longsleeves/products/the-tour-sketch-long-sleeve-t-shirt", "shirt 2.jpg", "THE TOUR SKETCH LONG SLEEVE T-SHIRT")
+    merch[6] = new Item(35.00, true, false, false, "https://shop.shawnmendesofficial.com/collections/t-shirts/products/the-tour-flower-t-shirt-i", "shirt 3.jpg", "THE TOUR FLOWER T-SHIRT I")
+    merch[7] = new Item(30.00, true, false, false, "https://shop.shawnmendesofficial.com/collections/t-shirts/products/monster-ledge-photo-t-shirt-screenprint-anniversary-edition", "shirt 4.jpg", "MONSTER LEDGE PHOTO T-SHIRT (SCREENPRINT ANNIVERSARY EDITION)")
+}
+
+function sortPrice(merch) {
+}
+</script> 
+
+
+</body>
+</link>
+
+</meta>
+</head>
+</html>
+
