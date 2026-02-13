@@ -2,7 +2,7 @@ class CustomNavbar extends HTMLElement {
     connectedCallback() {//makes sure it runs
         this.innerHTML = `
             <nav>
-                <a href="test.html" id="home-button">Home</a>               
+                <a href="../AdrianZixuanMain/Main.html" id="home-button">Home</a>               
                 <ul>                           
                     <li>
                         <a href="" class="nav-button">About</a>
