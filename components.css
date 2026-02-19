@@ -7,9 +7,9 @@
     --text-col: #f5f5dc;
     --button-col: #0f3226;
     --button-hover-col: #4b6136;
-
 }
 
+/* Might need to remove these 3*/
 body{  
     min-height: 100vh;
 }
@@ -19,21 +19,6 @@ body, body *{
     padding: 0;
 }
 
-main{
-    flex: 1;
-    background-color: var(--background-col);
-}
-
-article{
-    height: 10000px;
-}
-
-nav *{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;  
-    color: var(--text-col);  
-}
 
 /*DONT TOUCH THESE TWO THANK YOU XOXO*/
 header {
@@ -47,9 +32,15 @@ header {
     backface-visibility: hidden;
 }
 .scrolled-down {
-    transform: translateY(-90%);
+    transform: translateY(-100%);
 }
 
+nav *{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;  
+    color: var(--text-col);  
+}
 
 nav {
     background-color: var(--main-col);
