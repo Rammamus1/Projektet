@@ -3,7 +3,9 @@
 
     --slider-width:60rem;
 	--cards-width:30em;
-    --card-color:gray;    
+    --card-color:gray;
+    --text-col: #f5f5dc;
+    --button-hover-col: #4b6136;
 }
 
 body{
@@ -29,14 +31,14 @@ body{
 
 #main-nav span{
     display: block;
-    color: black;
+    color: var(--text-col);
     width: 5rem;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;    
+    border-top: 2px solid var(--text-col);
+    border-bottom: 2px solid var(--text-col);    
 }
 
 #main-nav button:hover{
-    background-color: white;
+    background-color: var(--button-hover-col);
 }
 
 main{
