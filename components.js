@@ -6,16 +6,16 @@ class CustomNavbar extends HTMLElement {
                 <a href="../AdrianZixuanMain/Main.html" id="home-button">Home</a>               
                 <ul>                           
                     <li>
-                        <a href="" class="nav-button">About</a>
+                        <a href="../HistoryUndersida/history.html" class="nav-button">History</a>
                     </li>
                     <li>
                         <a href="" class="nav-button">Works</a>
                     </li>
                     <li>
-                        <a href="" class="nav-button">Tour</a>
+                        <a href="../mainTours.html" class="nav-button">Tours</a>
                     </li>
                     <li>
-                        <a href="" class="nav-button">Merch</a>
+                        <a href="../MerchUndersida/MerchSida.html" class="nav-button">Merch</a>
                     </li>                                 
                     <li>
                         <a href="" class="nav-button">Socials</a>
@@ -33,6 +33,10 @@ class CustomFooter extends HTMLElement {
         <footer>
             <span class="footer-description">
             This is a fanmade appreciation website of Shawn Mendes made as a programming assignment for us students at KTH, Royal Institute of Technology.
+            </span>
+            <span>
+            <a href="https://privacy.umusic.com/terms/" class="footer-description">Terms & Conditions</a>
+            <a href="https://privacy.umusic.com/" class="footer-description">Privacy Policy</a>
             </span>
             <span>© 2026-30XX Kazoo Gruppen, Shawn Mendes. | All Rights Reserved</span>
         </footer>
