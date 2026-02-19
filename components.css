@@ -35,16 +35,21 @@ nav *{
     color: var(--text-col);  
 }
 
-/*DONT TOUCH, UNDER CONSTRUCTION*/
-header{
-    position: sticky;
+/*DONT TOUCH THESE TWO THANK YOU XOXO*/
+header {
+    position: fixed;
     top: 0;
-    transition: ease-in 1s;
+    left: 0;
+    width: 100%;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
+    backface-visibility: hidden;
+}
+.scrolled-down {
+    transform: translateY(-90%);
 }
 
-.scrolled-down{
-    transform:translateY(-90%);
-}
 
 nav {
     background-color: var(--main-col);
@@ -94,7 +99,7 @@ nav a:hover{
 
 footer{
     color: var(--text-col);
-    background: var(--main-col);
+    background-color: var(--main-col);
     height: 35vh;
     display: flex;
     flex-direction: column;

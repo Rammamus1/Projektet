@@ -1,8 +1,8 @@
 class CustomNavbar extends HTMLElement {
     connectedCallback() {//makes sure it runs
         this.innerHTML = `
-        <header>
-            <nav id="navbar">
+        <header id="default-header">
+            <nav>
                 <a href="../AdrianZixuanMain/Main.html" id="home-button">Home</a>               
                 <ul>                           
                     <li>
@@ -38,7 +38,6 @@ class CustomFooter extends HTMLElement {
             <a href="https://privacy.umusic.com/terms/" class="footer-description">Terms & Conditions</a>
             <a href="https://privacy.umusic.com/" class="footer-description">Privacy Policy</a>
             </span>
-            <span>© 2026-30XX Kazoo Gruppen, Shawn Mendes. | All Rights Reserved</span>
         </footer>
         `
     }
@@ -56,19 +55,21 @@ customElements.define("custom-navbar", CustomNavbar);
 customElements.define("custom-footer", CustomFooter);
 customElements.define("a-about", AboutSection);
 
-// Mi bombo this shi laggy as hell
-var lastScrollPos = 70;
+// Fixed I think
+var lastScrollPos = window.pageYOffset;
 window.addEventListener("scroll", () => {
-    let e = document.getElementById("navbar");
+    let e = document.getElementById("default-header");
     console.log("scrolled");
-    console.log(window.pageYOffset);
-    if (window.pageYOffset >= lastScrollPos){
+    console.log(window.scrollY);
+    let currentScrollPos = window.scrollY;
+
+    if (currentScrollPos >= lastScrollPos){
         console.log("down");
         e.classList.add("scrolled-down");
-        lastScrollPos = window.pageYOffset;
-    } else if (window.pageYOffset < lastScrollPos) {
+        lastScrollPos = window.scrollY;
+    } else if (currentScrollPos < lastScrollPos) {
         console.log("up");
-        e.classList.remove("scrolled-down");   
-        lastScrollPos = 70;         
+        e.classList.remove("scrolled-down");
+        lastScrollPos = window.pageYOffset;            
     } 
 });
