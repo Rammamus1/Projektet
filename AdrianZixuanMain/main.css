@@ -1,0 +1,106 @@
+:root{
+    --nav-height:5rem;
+
+    --slider-width:60rem;
+	--cards-width:30em;
+    --card-color:gray;    
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    padding-top: var(--nav-height);
+    background-color: var(--background-col);    
+}
+
+#main-nav{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#main-nav button{
+    margin: 0 1rem;
+    height: 100%;   
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#main-nav span{
+    display: block;
+    color: black;
+    width: 5rem;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;    
+}
+
+#main-nav button:hover{
+    background-color: white;
+}
+
+main{
+    flex: 1;
+    min-height: 80vh;
+}
+
+article{
+    height: 80vh;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+#history{
+    background-color: rgb(0, 92, 92);
+}
+
+#history section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#works{
+    background-color: rgb(0, 82, 82);
+}
+#works ol{ /* SCROLLING SNAP HAS SOME BUGS*/
+    list-style: none;
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    padding-inline: calc((100% - 30rem) / 2);    
+}
+#works li{
+    scroll-snap-align: center;
+}
+#works div{
+    --img-container:30rem;
+    height: var(--img-container);
+    width: var(--img-container);
+    background-image: url("placeholder1200x1200.png");
+    background-size:cover;
+}
+#works ol::-webkit-scrollbar {
+  height: 10px;
+}
+#works ol::-webkit-scrollbar-track {
+  background: transparent;
+}
+#works ol::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.3);
+}
+#works ol::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0,0,0,0.5);
+} 
+
+#tours{
+    background-color: rgb(0, 72, 72);
+}
+#merch{
+    background-color: rgb(0, 62, 62);
+}
+#socials{
+    background-color: rgb(0, 52, 52);
+}
