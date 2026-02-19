@@ -6,7 +6,7 @@
 
 .carousel {
     width: 87.25%;
-    height: 90%;
+    height: 70%;
     place-self: center;
     border-style: dotted;
     overflow: hidden;
@@ -17,17 +17,23 @@
     width: 70%;
 
 }
+
 .carousel-track {
     display: flex;
     gap: 5rem;
     width: 70%;
 }
 
-.slide-component {
+.carousel-image {
     flex: 0 0 calc((100% - 2 * 3rem) / 3);
     aspect-ratio: 1 / 1; 
     object-fit: cover;
     border-radius: 8px;
+}
+
+.carousel-button {
+    transform: translateY(120%);
+    transform: translateX(-200%);
 }
 
 .arrow {
@@ -44,3 +50,13 @@
 
 .left { left: 10px; }
 .right { right: 10px; }
+
+.work-buttons {
+    
+}
+
+.work-buttons a {
+    color: #f5f5dc;
+    text-decoration: none;
+}
+
