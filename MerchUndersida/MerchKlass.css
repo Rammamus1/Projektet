@@ -56,10 +56,10 @@ align-items: center;
 .bakgrund-container
 {
 background-color: #004d4d;
-width: 80%;
+width: 80rem;
 margin: 0 auto;
 min-height: 150rem;
-padding: 1.25;
+padding: 1.25rem;
 }
 
 h1 

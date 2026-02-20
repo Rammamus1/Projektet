@@ -59,8 +59,9 @@ function printItems(merchList)
     {
         imgContent += `
         <div class="merch-item">
-
-        <img src="MerchBilagor/${merchList[i].image}" alt="${merchList[i].name}"> <a href="${merchList[i].link}"> </img>
+        <a href="${merchList[i].link}">
+        <img src="MerchBilagor/${merchList[i].image}" alt="${merchList[i].name}">  </img>
+        </a>
         <p> ${merchList[i].name}</p>
         <p>$${merchList[i].price}</p>
         
