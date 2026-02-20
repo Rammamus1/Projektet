@@ -56,10 +56,10 @@ align-items: center;
 .bakgrund-container
 {
 background-color: #004d4d;
-width: 80%;
+width: 80rem;
 margin: 0 auto;
 min-height: 150rem;
-padding: 1.25;
+padding: 1.25rem;
 }
 
 h1 
@@ -79,13 +79,13 @@ font-size: 30px;
 }
 
 .merch-item {
-    text-align: center;
+    text-align: flex;
     background: transparent;
     padding: 15px;
     border-radius: 8px;
 }
 .merch-item img {
-    width: 5rem;       
+    width: 10rem;       
     height: auto;
     border-radius: 4px;
     margin-bottom: 10px;
@@ -96,4 +96,17 @@ font-size: 30px;
     gap: 20px;
     padding: 20px;
 
+}
+
+.column {
+float: left;
+width: 33.33%;
+padding: 1.25rem
+}
+
+.row::after
+{
+  content: "";
+  clear: both;
+  display: table;
 }
