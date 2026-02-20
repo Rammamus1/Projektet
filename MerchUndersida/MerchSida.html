@@ -40,7 +40,7 @@ class Item
 }
 
 function createItems() {
-    merchList = []
+    let merchList = [];
     merchList[0] = new Item(45.00, true, false, false, "https://shop.shawnmendesofficial.com/products/white-heart-tour-tee", "shirt 1.jpg", "WHITE HEART TOUR TEE");
     merchList[1] = new Item(70.00, false, true, false, "https://shop.shawnmendesofficial.com/products/w-hoodie-i", "hoodie 1.jpg", "W HOODIE I");
     merchList[2] = new Item(60.00, false, true, false, "https://shop.shawnmendesofficial.com/products/winter-floral-02-hoodie", "hoodie 2.jpg", "WINTER FLORAL 02 HOODIE");
@@ -59,13 +59,14 @@ function sortPrice(merchList) {
     });
 }
 
-/* let originaltems();
+let originalList = createItems();
 let merchList = [...originalList];
-let sorted = False;
+let sorted = false;
 
+// toggleSort 
 function toggleSort() {
 
-    If (!sorted) {
+    if (!sorted) {
         sortPrice(merchList);
     }
     else {
@@ -73,39 +74,38 @@ function toggleSort() {
     }
     sorted = !sorted;
     printItems(merchList);
-} */
+} 
 
-function printItems(merchList)
+function printItems(list)
 {
-    displayArea = document.getElementById("merch-display");
-    let imgContent = "<div class merchList-grid>";
-    for (var i=0; i < merchList.length; i++)
+    let displayArea = document.getElementById("merch-display");
+    let imgContent = "<div class='merchList-grid'>";
+
+    for (let i = 0; i < list.length; i++)
     {
         imgContent += `
         <div class="merch-item">
             <div class="row">
                 <div class="column">
-;        <img src="MerchBilagor/${merchList[i].image}" alt="${merchList[i].name}">  </img>
-        </a>
-                
-        <p> ${merchList[i].name}</p>
-        <p>$${merchList[i].price}</p>
+                    <a href="${list[i].link}">
+                        <img src="MerchBilagor/${list[i].image}" alt="${list[i].name}">
+                    </a>
+                    <p>${list[i].name}</p>
+                    <p>$${list[i].price}</p>
                 </div>
             </div>
         </div>`;
     }
+
     imgContent += "</div>";
     displayArea.innerHTML = imgContent;
 }
 
-var aaaa = createItems()
-printItems(aaaa)
+
+printItems(merchList);
 </script> 
 
 
 </body>
-</link>
-</link>
-</meta>
 </html>
 
