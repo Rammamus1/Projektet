@@ -16,9 +16,11 @@
 
 <h2>Recommended Apparel</h2>
 
-<button onclick="sortAndRender()">Sort by Price</button>
+<button onclick="toggleSort()">Toggle Sort by Price</button>
 
-<div id="merch-display"></div>
+<div id="merch-display">
+
+
 </div>
 
 <script type = "text/javascript">
@@ -46,7 +48,7 @@ function createItems() {
     merchList[4] = new Item(13.98, false, false, true, "https://shop.shawnmendesofficial.com/collections/vintage-shop/products/shawn-mendes-cd", "cd 2.jpg", "Shawn Mendes CD");
     merchList[5] = new Item(40.00, true, true, false, "https://shop.shawnmendesofficial.com/collections/longsleeves/products/the-tour-sketch-long-sleeve-t-shirt", "shirt 2.jpg", "THE TOUR SKETCH LONG SLEEVE T-SHIRT");
     merchList[6] = new Item(35.00, true, false, false, "https://shop.shawnmendesofficial.com/collections/t-shirts/products/the-tour-flower-t-shirt-i", "shirt 3.jpg", "THE TOUR FLOWER T-SHIRT I");
-    merchList[7] = new Item(30.00, true, false, false, "https://shop.shawnmendesofficial.com/collections/t-shirts/products/monster-ledge-photo-t-shirt-screenprint-anniversary-edition", "shirt 4.jpg", "MONSTER LEDGE PHOTO T-SHIRT (SCREENPRINT ANNIVERSARY EDITION)");
+    merchList[7] = new Item(30.00, true, false, false, "https://shop.shawnmendesofficial.com/collections/t-shirts/products/monster-ledge-photo-t-shirt-screenprint-anniversary-edition", "shirt 4.jpg", "MONSTER LEDGE PHOTO T-SHIRT");
     return merchList;
 } 
 
@@ -57,12 +59,21 @@ function sortPrice(merchList) {
     });
 }
 
-// Sorterar och skriver ut
-function sortAndRender() {
-    sortPrice(aaaa);
-    printItems(aaaa);
-}
+/* let originaltems();
+let merchList = [...originalList];
+let sorted = False;
 
+function toggleSort() {
+
+    If (!sorted) {
+        sortPrice(merchList);
+    }
+    else {
+        merchList = [...originalList];
+    }
+    sorted = !sorted;
+    printItems(merchList);
+} */
 
 function printItems(merchList)
 {
@@ -72,13 +83,16 @@ function printItems(merchList)
     {
         imgContent += `
         <div class="merch-item">
-        <a href="${merchList[i].link}">
-        <img src="MerchBilagor/${merchList[i].image}" alt="${merchList[i].name}">  </img>
+            <div class="row">
+                <div class="column">
+;        <img src="MerchBilagor/${merchList[i].image}" alt="${merchList[i].name}">  </img>
         </a>
+                
         <p> ${merchList[i].name}</p>
         <p>$${merchList[i].price}</p>
-        
-    </div>`;
+                </div>
+            </div>
+        </div>`;
     }
     imgContent += "</div>";
     displayArea.innerHTML = imgContent;
