@@ -108,6 +108,17 @@ font-size: 30px;
     margin: 0 auto;
 }
 
+.all-merch-wrapper
+{
+background-color: #003333
+
+;
+width: 50rem;
+margin: 0 auto;
+min-height: 40rem;
+padding: 1rem;
+}
+
 .button1{
 padding:0.5rem 1rem;
 background-color: white;
@@ -117,3 +128,4 @@ font-size: 14px;
 color: black;
 margin-left: 10%;
 }
+
