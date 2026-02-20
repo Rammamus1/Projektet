@@ -53,7 +53,7 @@ display: flex;
 align-items: center;
 }
 
-.bakgrund-container
+.background-container
 {
 background-color: #004d4d;
 width: 80rem;
@@ -78,11 +78,18 @@ text-align: center;
 font-size: 30px;
 }
 
+h3{
+margin-top: 2rem;
+text-align: center;
+font-size: 30px;
+}
+
 .merch-item {
-    text-align: flex;
+    text-align: center;
     background: transparent;
-    padding: 15px;
-    border-radius: 8px;
+    padding: 5px;
+    border-radius: 4px;
+    
 }
 .merch-item img {
     width: 10rem;       
@@ -95,18 +102,18 @@ font-size: 30px;
     display: grid;
     gap: 20px;
     padding: 20px;
-
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    width: 40rem;
+    margin: 0 auto;
 }
 
-.column {
-float: left;
-width: 33.33%;
-padding: 1.25rem
-}
-
-.row::after
-{
-  content: "";
-  clear: both;
-  display: table;
+.button1{
+padding:0.5rem 1rem;
+background-color: white;
+display: inline-block;
+font-family: "Roboto";
+font-size: 14px;
+color: black;
+margin-left: 10%;
 }
