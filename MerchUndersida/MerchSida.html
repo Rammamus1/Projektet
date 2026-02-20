@@ -3,9 +3,16 @@
 <meta name="viewport" charset="utf-8" lang="En" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="MerchKlass.css">
 <link rel="stylesheet" href="MerchBilagor">
+<link rel="stylesheet" href="../components.css">
+<script src="../components.js"></script>
+
 </head>
 
+
 <body>
+    <custom-navbar></custom-navbar>
+    <main>
+
 <div class="background-wrapper">
 <div class="container">
 <div> 
@@ -16,7 +23,9 @@
 </div>
 
 <h2>Recommended Apparel</h2>
-<div class="recommended-merch-wrapper"></div>
+<div class="recommended-merch-wrapper">
+
+</div>
 
 <h3> View All </h3>
 
@@ -99,11 +108,38 @@ function printItems(list)
     displayArea.innerHTML = imgContent;
 }
 
+function printRecommended()
+{
+let recommendedArea = document.querySelector(".recommended-merch-wrapper");
+
+let shuffleList = [...originalList].sort(() => 0.5 - Math.random());
+
+let randomItemList = shuffleList.slice(0,3)
+
+let imgContent = "<div class='merch-grid'>"
+
+    for (let i = 0; i < randomItemList.length; i++)
+    {
+        imgContent += `
+        <div class="merch-item">
+        <a href="${randomItemList[i].link}">
+                <img src="MerchBilagor/${randomItemList[i].image}" alt="${randomItemList[i].name}">
+        </a>
+            <p>${randomItemList[i].name}</p>
+            <p>$${randomItemList[i].price}</p>
+
+        </div>`;
+    }
+recommendedArea.innerHTML = imgContent;
+}
 
 printItems(merchList);
+printRecommended();
+
 </script> 
 
-
+    </main>
+    <custom-footer></custom-footer>
 </body>
 </html>
 

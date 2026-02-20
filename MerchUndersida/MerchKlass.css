@@ -3,9 +3,17 @@ body
 background-color: #4b6136;
 color: white;
 text-shadow:1px 1px 2px black;
-min-height: 100vh;
-
 }
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;   
+    min-height: 100vh;
+}
+
 body *{
 
     margin: 0;
@@ -58,8 +66,9 @@ align-items: center;
 background-color: #004d4d;
 width: 70rem;
 margin: 0 auto;
-min-height: 100rem;
+min-height: 90rem;
 padding: 1.25rem;
+padding-top: 5rem;
 }
 
 h1 
@@ -119,18 +128,19 @@ padding: 1rem;
 
 .button1{
 padding:0.5rem 1rem;
-background-color: black;
+background-color: #008080;
 display: inline-block;
 font-family: "Roboto";
 font-size: 14px;
 color: white;
 margin-left: 13%;
+display:flex;
 }
 
 .recommended-merch-wrapper{
 background-color: #003333;
 width: 50rem;
 margin: 0 auto;
-min-height: 10rem;
+min-height: 0;
 padding: 1rem;
 }
