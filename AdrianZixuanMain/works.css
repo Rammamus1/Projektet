@@ -6,10 +6,12 @@
 
 .carousel {
     width: 87.25%;
+    margin: 0 auto;
+    position: relative;
     height: 70%;
     place-self: center;
     overflow: hidden;
-    position: relative;
+    padding-inline: calc((100% - 1000rem) / 2);
 }
 
 /*
@@ -25,8 +27,8 @@
 }
 
 .carousel-image {
-    flex: 0 0 calc((100% - 2 * 3rem) / 3);
-    aspect-ratio: 1 / 1; 
+    width: 87.25%;
+    height: 87.25%;
     object-fit: cover;
     border-radius: 8px;
 }

@@ -20,6 +20,10 @@ h2 {
     color: var(--text-col);
 }
 
+.top-article{
+    background-image: url("images/shawn-mendes-background.png");
+}
+
 #main-nav{
     width: 100%;
     display: flex;
