@@ -5,7 +5,7 @@
 }
 
 .carousel {
-    width: 87.25%;
+    width: 88%;
     margin: 0 auto;
     position: relative;
     height: 70%;
@@ -22,13 +22,13 @@
 
 .carousel-track {
     display: flex;
-    gap: 5rem;
+    gap: 5vw;
     width: 70%;
 }
 
 .carousel-image {
-    width: 87.25%;
-    height: 87.25%;
+    width: calc(100vw/4.05);
+    height: calc(100vw/4.05);
     object-fit: cover;
     border-radius: 8px;
 }
@@ -51,5 +51,5 @@
 }
 
 .left { left: 10px; }
-.right { right: 10px; }
+.right { right: 14px; }
 
