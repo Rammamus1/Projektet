@@ -4,13 +4,81 @@ body {
     min-height: 100vh;
     background: #001919;
     color: white;
-    font-family: sans-serif;
+    font-family: "Roboto",sans-serif;
 }
 
 h1 {
     text-align: center;
     padding: 40px 0;
 }
+
+.sidebar-box {
+    position:fixed;
+    top: 150px;
+    left: 35px;
+
+    width: 275px;
+    padding: 25px;
+    background: #1e3e2a;
+    border-radius: 30px;
+
+    border: 1px solid #2d4a2e;
+}
+
+.sidebar-box h3 {
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+.stats-title {
+    margin-top: 25px; 
+}
+
+.stat:hover {
+    background: #3c5532;
+    transition: 0.5s;
+}
+.milestones {
+    list-style:none;
+    padding: 0px;
+    margin: 0;
+}
+
+.milestones li {
+    margin-bottom: 12px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.milestones li::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+    color: #4b6136;
+}
+
+
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;  
+}
+
+.stat {
+    background: #2d4a2e;
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+
+.number {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    display: block;
+}
+
 
 .content img {
     width: 100%;
@@ -28,18 +96,13 @@ h1 {
 .line {
 position: absolute;
 width: 5px;
-background: #066;
+background: #4b6136;
 top: 0;
 left: 50%;
 transform: translateX(-50%);
 height:0;
 transition: height 0.2s ease-out
 }
-
-.navbar {
-    text-align: center;
-}
-
 
 .event {
     position: relative;
