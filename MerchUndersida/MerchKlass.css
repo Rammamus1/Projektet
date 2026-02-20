@@ -53,12 +53,12 @@ display: flex;
 align-items: center;
 }
 
-.background-container
+.background-wrapper
 {
 background-color: #004d4d;
-width: 80rem;
+width: 70rem;
 margin: 0 auto;
-min-height: 150rem;
+min-height: 100rem;
 padding: 1.25rem;
 }
 
@@ -110,9 +110,7 @@ font-size: 30px;
 
 .all-merch-wrapper
 {
-background-color: #003333
-
-;
+background-color: #003333;
 width: 50rem;
 margin: 0 auto;
 min-height: 40rem;
@@ -121,11 +119,18 @@ padding: 1rem;
 
 .button1{
 padding:0.5rem 1rem;
-background-color: white;
+background-color: black;
 display: inline-block;
 font-family: "Roboto";
 font-size: 14px;
-color: black;
-margin-left: 10%;
+color: white;
+margin-left: 13%;
 }
 
+.recommended-merch-wrapper{
+background-color: #003333;
+width: 50rem;
+margin: 0 auto;
+min-height: 10rem;
+padding: 1rem;
+}

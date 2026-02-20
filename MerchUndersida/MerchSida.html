@@ -6,7 +6,7 @@
 </head>
 
 <body>
-<div class="background-container">
+<div class="background-wrapper">
 <div class="container">
 <div> 
     <h1 class="unbold roboto_font">
@@ -16,7 +16,7 @@
 </div>
 
 <h2>Recommended Apparel</h2>
-
+<div class="recommended-merch-wrapper"></div>
 
 <h3> View All </h3>
 
@@ -42,14 +42,14 @@ class Item
 
 function createItems() {
     let merchList = [];
-    merchList[0] = new Item(45.00, true, false, false, "https://shop.shawnmendesofficial.com/products/white-heart-tour-tee", "shirt 1.jpg", "WHITE HEART TOUR TEE");
-    merchList[1] = new Item(70.00, false, true, false, "https://shop.shawnmendesofficial.com/products/w-hoodie-i", "hoodie 1.jpg", "W HOODIE I");
+    merchList[0] = new Item(45.00, true, false, false, "https://shop.shawnmendesofficial.com/products/white-heart-tour-tee", "shirt 1.png", "WHITE HEART TOUR TEE");
+    merchList[1] = new Item(70.00, false, true, false, "https://shop.shawnmendesofficial.com/products/w-hoodie-i", "hoodie 1.png", "W HOODIE I");
     merchList[2] = new Item(60.00, false, true, false, "https://shop.shawnmendesofficial.com/products/winter-floral-02-hoodie", "hoodie 2.jpg", "WINTER FLORAL 02 HOODIE");
     merchList[3] = new Item(5.00, false, false, true, "https://shop.shawnmendesofficial.com/collections/vintage-shop/products/if-i-can-t-have-you-cd-i", "cd 1.jpg", "If I Cant Have You CD I");
     merchList[4] = new Item(13.98, false, false, true, "https://shop.shawnmendesofficial.com/collections/vintage-shop/products/shawn-mendes-cd", "cd 2.jpg", "Shawn Mendes CD");
-    merchList[5] = new Item(40.00, true, true, false, "https://shop.shawnmendesofficial.com/collections/longsleeves/products/the-tour-sketch-long-sleeve-t-shirt", "shirt 2.jpg", "THE TOUR SKETCH LONG SLEEVE T-SHIRT");
+    merchList[5] = new Item(40.00, true, true, false, "https://shop.shawnmendesofficial.com/collections/longsleeves/products/the-tour-sketch-long-sleeve-t-shirt", "shirt 2.png", "THE TOUR SKETCH LONG SLEEVE T-SHIRT");
     merchList[6] = new Item(35.00, true, false, false, "https://shop.shawnmendesofficial.com/collections/t-shirts/products/the-tour-flower-t-shirt-i", "shirt 3.jpg", "THE TOUR FLOWER T-SHIRT I");
-    merchList[7] = new Item(30.00, true, false, false, "https://shop.shawnmendesofficial.com/collections/t-shirts/products/monster-ledge-photo-t-shirt-screenprint-anniversary-edition", "shirt 4.jpg", "MONSTER LEDGE PHOTO T-SHIRT");
+    merchList[7] = new Item(30.00, true, false, false, "https://shop.shawnmendesofficial.com/collections/t-shirts/products/monster-ledge-photo-t-shirt-screenprint-anniversary-edition", "shirt 4.png", "MONSTER LEDGE PHOTO T-SHIRT");
     return merchList;
 } 
 
