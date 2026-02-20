@@ -2,7 +2,8 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background: #001919;
+    /* background: #1e3e2a; */
+    background: #003333;
     color: white;
     font-family: "Roboto",sans-serif;
 }
@@ -10,6 +11,8 @@ body {
 h1 {
     text-align: center;
     padding: 40px 0;
+    font-family:"sans-serif";
+    font-size: 50px;
 }
 
 .sidebar-box {
@@ -19,7 +22,7 @@ h1 {
 
     width: 275px;
     padding: 25px;
-    background: #1e3e2a;
+    background: #0F3226;
     border-radius: 30px;
 
     border: 1px solid #2d4a2e;
@@ -36,7 +39,7 @@ h1 {
 
 .stat:hover {
     background: #3c5532;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 .milestones {
     list-style:none;
@@ -54,7 +57,7 @@ h1 {
     content: "-";
     position: absolute;
     left: 0;
-    color: #4b6136;
+    color: rgb(255, 255, 255);
 }
 
 
@@ -96,7 +99,7 @@ h1 {
 .line {
 position: absolute;
 width: 5px;
-background: #4b6136;
+background: #3C5532;
 top: 0;
 left: 50%;
 transform: translateX(-50%);
@@ -129,7 +132,7 @@ transition: height 0.2s ease-out
 }
 
 .content {
-    background: #003333;
+    background: #1e3e2a;
     padding: 20px;
     border-radius: 8px;
     transition: transform 0.3s ease;
