@@ -7,9 +7,9 @@
     --text-col: #f5f5dc;
     --button-col: #0f3226;
     --button-hover-col: #4b6136;
-
 }
 
+/* Might need to remove these 3*/
 body{  
     min-height: 100vh;
 }
@@ -19,13 +19,20 @@ body, body *{
     padding: 0;
 }
 
-main{
-    flex: 1;
-    background-color: var(--background-col);
-}
 
-article{
-    height: 10000px;
+/*DONT TOUCH THESE TWO THANK YOU XOXO*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
+    backface-visibility: hidden;
+}
+.scrolled-down {
+    transform: translateY(-100%);
 }
 
 nav *{
@@ -33,17 +40,6 @@ nav *{
     padding: 0;
     text-decoration: none;  
     color: var(--text-col);  
-}
-
-/*DONT TOUCH, UNDER CONSTRUCTION*/
-header{
-    position: sticky;
-    top: 0;
-    transition: ease-in 1s;
-}
-
-.scrolled-down{
-    transform:translateY(-90%);
 }
 
 nav {
@@ -94,7 +90,7 @@ nav a:hover{
 
 footer{
     color: var(--text-col);
-    background: var(--main-col);
+    background-color: var(--main-col);
     height: 35vh;
     display: flex;
     flex-direction: column;

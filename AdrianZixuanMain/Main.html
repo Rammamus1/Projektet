@@ -5,19 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Page</title>
     <link rel="stylesheet" href="../components.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="works.css">
 </head>
 <body>
-    
-    <custom-navbar></custom-navbar>
+    <header id="default-header">
+        <nav id="main-nav">
+            <button onclick="scrollToArticle('history')"><span>History</span></button>
+            <button onclick="scrollToArticle('works')"><span>Works</span></button>
+            <button onclick="scrollToArticle('tours')"><span>Tours</span></button>
+            <button onclick="scrollToArticle('merch')"><span>Merch</span></button>
+            <button onclick="scrollToArticle('socials')"><span>Socials</span></button>          
+        </nav>
+    </header>
 
     <main>
         <article>
-            <a-about></a-about>
+            <h1>Hello World!</h1>
+        </article>
+        <article id="history">
+            <h2>History</h2>
+            <section>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas sed a qui ducimus nobis, veniam odit, temporibus nisi recusandae eum quam illum facere. Eum quod, ut nobis accusamus adipisci quisquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dicta facilis fugit non vel obcaecati voluptates sunt nisi soluta adipisci eos aperiam recusandae, provident, porro dolor cumque. Mollitia, exercitationem Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga quae, fugit accusamus excepturi at iste eligendi. Corrupti quibusdam possimus repellendus numquam dolores sed exercitationem, voluptatum eos ipsum esse consectetur! At! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto accusamus incidunt voluptate. Inventore commodi, earum, neque soluta, doloremque dignissimos repellendus veniam dolores eius quas debitis ipsa dolorum provident alias rem.</p>
+                <button class="more-button">More</button>                
+            </section>
+
+        </article>
+
+        <article id="works">
+            <h2>Albums</h2>
+            <section class="carousel">
+                <div class="carousel-viewport">
+                    <div class="carousel-track" id="carouselTrack">
+                        <img src="images/album-handwritten1000x1000.png" class="carousel-image">
+                        <img src="images/album-illuminate1000x1000.png" class="carousel-image">
+                        <img src="images/album-shawn-mendes1000x1000.png" class="carousel-image">
+                        <img src="images/album-wonder1000x1000.png" class="carousel-image">
+                    </div>
+                </div>
+                <button class="arrow left">&#10094;</button>
+                <button class="arrow right">&#10095;</button>
+            </section>
+            
+            <div class="work-buttons">
+                <a href="wikipedia.com">See all works</a>
+                <a href="https://open.spotify.com/artist/7n2wHs1TKAczGzO7Dd2rGr">Stream now</a>
+            </div>
+
+            <!--
+            <ol>
+                <li><a href="#"><div></div></a></li>
+                <li><a href="#"><div></div></a></li>
+                <li><a href="#"><div></div></a></li>
+                <li><a href="#"><div></div></a></li>
+                <li><a href="#"><div></div></a></li>
+            </ol>
+            <button class="more-button">More</button>-->
+        </article>
+
+        <article id="tours">
+            <h2>Tours</h2>
+            <button class="more-button">More</button>
+        </article>
+
+        <article id="merch">
+            <h2>Merch</h2>
+            <section>
+                <p>Check out merch store</p>
+                <button class="more-button">More</button>
+            </section>
+            <section>
+                <div>item1</div>
+                <div>item2</div>
+            </section>
+        </article>
+
+        <article id="socials">
+            <h2>Find him here</h2>
+            <button class="more-button">More</button>
         </article>
     </main>
 
     <custom-footer></custom-footer>
 
 </body>
-<script src="../components.js"> </script>
+<script src="../components.js"></script>
+<script src="main.js"></script>
 </html>
