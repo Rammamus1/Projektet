@@ -1,6 +1,6 @@
 body 
 {
-background-color: #004d4d;
+background-color: #4b6136;
 color: white;
 text-shadow:1px 1px 2px black;
 min-height: 100vh;
@@ -36,30 +36,64 @@ font-weight: normal;
 .container
 {
 display: grid;
-grid-template-columns: 75rem;
+grid-template-columns: 70rem;
 grid-template-rows: 9rem;
 place-self: center;
 padding: 2px;
 }
 
-.container div{
-background-image: url(shawn-mendes-header.jpg);
+.container div
+{
+background-image: url(MerchBilagor/shawn-mendes-header.jpg);
 background-size: cover;
 background-position: center 40%;
 border: 3px solid white;
 padding: 10px;
-font-size: 15px;
-text-align: center;
+display: flex;
+align-items: center;
+}
 
+.bakgrund-container
+{
+background-color: #004d4d;
+width: 80%;
+margin: 0 auto;
+min-height: 150rem;
+padding: 1.25;
 }
 
 h1 
 {
-text-align: center;
-font-size: 50;
+text-align: left;
+font-size: 50px;
+margin-left: 13%;
+white-space: nowrap;
+text-shadow:2px 2px 2px black;
 }
 
-img
+h2
 {
-background-image: white;
+margin-top: 2rem;
+text-align: center;
+font-size: 30px;
+}
+
+.merch-item {
+    text-align: center;
+    background: transparent;
+    padding: 15px;
+    border-radius: 8px;
+}
+.merch-item img {
+    width: 5rem;       
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.merch-grid {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+
 }
