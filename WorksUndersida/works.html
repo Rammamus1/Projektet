@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Shawn Mendes | Verk</title>
+    <style>
+        /* === Modern touch & hover effects === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #111;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        section {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px; /* space between album cards */
+        }
+
+        /* Album card styling */
+        .album {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 20px;          /* rounded corners */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08); /* soft shadow */
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        /* Hover effect – card lifts up */
+        .album:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 18px 30px rgba(0,0,0,0.15);
+        }
+
+        h2 {
+            border-bottom: 3px solid #ffb347; /* orange accent */
+            padding-bottom: 8px;
+            font-size: 1.9rem;
+            margin-bottom: 15px;
+            color: #111;
+        }
+
+        .album p {
+            font-size: 1.1rem;
+            color: #444;
+            margin-bottom: 15px;
+        }
+
+        .album strong {
+            font-size: 1.2rem;
+            color: #222;
+        }
+
+        ul {
+            margin: 12px 0 0 20px;
+            list-style-type: disc;
+        }
+
+        ul li {
+            margin-bottom: 6px;
+            font-size: 1.05rem;
+            transition: color 0.2s;
+        }
+
+        /* Slight hover effect on list items */
+        ul li:hover {
+            color: #ffb347;
+            cursor: default;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #111;
+            color: white;
+            margin-top: 50px;
+            font-size: 1rem;
+        }
+
+        /* Small responsive fix */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2.3rem; }
+            .album { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Shawn Mendes</h1>
+    <p>Verk (Album/låtar)</p>
+</header>
+
+<section>
+
+    <div class="album">
+        <h2>Handwritten (2015)</h2>
+        <p>Shawn Mendes debutalbum. Ett pop- och akustiskt album som introducerade honom för en internationell publik.</p>
+        <strong>Kända låtar:</strong>
+        <ul>
+            <li>Stitches</li>
+            <li>Life of the Party</li>
+            <li>Something Big</li>
+        </ul>
+    </div>
+
+    <div class="album">
+        <h2>Illuminate (2016)</h2>
+        <p>Ett album där han utforskar känslor, sårbarhet och personlig utveckling.</p>
+        <strong>Kända låtar:</strong>
+        <ul>
+            <li>Treat You Better</li>
+            <li>Mercy</li>
+            <li>There's Nothing Holdin' Me Back</li>
+        </ul>
+    </div>
+
+    <div class="album">
+        <h2>Shawn Mendes (2018)</h2>
+        <p>Ett mer personligt och känslosamt album där han öppnar upp om ångest och identitet.</p>
+        <strong>Kända låtar:</strong>
+        <ul>
+            <li>In My Blood</li>
+            <li>Lost in Japan</li>
+            <li>Youth</li>
+        </ul>
+    </div>
+
+    <div class="album">
+        <h2>Wonder (2020)</h2>
+        <p>Ett emotionellt album som handlar om kärlek, tvivel och att växa upp i offentligheten.</p>
+        <strong>Kända låtar:</strong>
+        <ul>
+            <li>Wonder</li>
+            <li>Monster</li>
+            <li>305</li>
+        </ul>
+    </div>
+
+    <div class="album">
+        <h2>Shawn (2024)</h2>
+        <p>Ett mer reflekterande album som återgår till hans akustiska rötter.</p>
+        <strong>Kända låtar:</strong>
+        <ul>
+            <li>Lägg till singlar vid behov</li>
+        </ul>
+    </div>
+
+</section>
+
+<footer>
+    <p>© Shawn Mendes – projekt</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,167 @@
+/* body *{
+
+    margin: 0;
+    padding: 0;
+}
+
+body{
+
+    min-height: 100vh;
+
+} */
+
+/*
+
+    #font-family: 'Times New Roman', Arial, sans-serif; */ 
+
+/* ===== Base ===== */
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Times New Roman', Arial, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: radial-gradient(circle at top, #0f4c5c, #062f3f);
+    color: #e0f7fa;
+}
+
+/* ===== Main title ===== */
+h1 {
+    font-size: 5rem;
+    margin-bottom: 50px;
+    letter-spacing: 4px;
+    color: #b2ebf2;
+    text-shadow: 0 0 18px rgba(178, 235, 242, 0.5);
+}
+
+/* ===== Music row ===== */
+.music-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin: 40px 0;
+}
+
+.music-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Icons */
+.icon-title i {
+    font-size: 85px;
+    color: #4dd0e1;
+    text-shadow: 0 0 22px rgba(77, 208, 225, 0.6);
+}
+
+/* Headings */
+h2 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #e0f7fa;
+}
+
+/* Links */
+.music-item a {
+    margin-top: 16px;
+    font-size: 1.7rem;
+    text-decoration: none;
+    color: #80deea;
+    font-weight: 600;
+}
+
+.music-item a:hover {
+    color: #b2ebf2;
+    text-shadow: 0 0 12px rgba(178, 235, 242, 0.7);
+}
+
+/* Image */
+img {
+    margin-top: 50px;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    box-shadow: 0 0 45px rgba(77, 208, 225, 0.7);
+}
+
+/* Platform accents
+.fa-spotify   { color: #1db954; }
+.fa-youtube   { color: #ff5252; }
+.fa-apple     { color: #ffffff; }
+.fa-instagram { color: #ff8a80; }
+.fa-envelope  { color: #80deea; } */
+
+/* ===== Laptop (1024px) Balanced ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        justify-content: center;
+        padding: 30px 20px;
+    }
+
+    h1 { font-size: 4.2rem; }
+    .icon-title i { font-size: 75px; }
+    h2 { font-size: 2.2rem; }
+    .music-item a { font-size: 1.5rem; }
+
+    .music-row {
+        flex-wrap: wrap; /* wrap to balance Instagram + Email */
+        gap: 80px;
+    }
+
+    .music-row:nth-child(2) { /* Instagram + Email row */
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    img {
+        width: 240px;
+        height: 240px;
+        margin-top: 40px;
+    }
+}
+
+/* ===== Tablet & below ===== */
+@media (max-width: 768px) {
+    body {
+        justify-content: flex-start;
+        padding: 40px 20px;
+    }
+
+    .music-row {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    img {
+        width: 200px;
+        height: 200px;
+    }
+
+    h1 { font-size: 3rem; }
+    .icon-title i { font-size: 55px; }
+    h2 { font-size: 1.8rem; }
+    .music-item a { font-size: 1.3rem; }
+}
+
+/* ===== Small phones ===== */
+@media (max-width: 480px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.5rem; }
+    .icon-title { gap: 12px; }
+    .music-item a { font-size: 1.2rem; }
+    img { width: 180px; height: 180px; }
+}

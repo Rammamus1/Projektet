@@ -43,17 +43,8 @@ class CustomFooter extends HTMLElement {
     }
 };
 
-class AboutSection extends HTMLElement{
-    connectedCallback() {
-        this.innerHTML = `
-        <p>yabababababababab</p>
-        `
-    }
-};
-
 customElements.define("custom-navbar", CustomNavbar);
 customElements.define("custom-footer", CustomFooter);
-customElements.define("a-about", AboutSection);
 
 // Fixed I think
 var lastScrollPos = window.pageYOffset;

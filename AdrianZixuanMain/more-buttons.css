@@ -1,0 +1,38 @@
+:root{
+    --text-col: #f5f5dc;
+    --button-col: #0f3226;
+    --button-hover-col: #4b6136;
+}
+
+a{
+    color: var(--text-col);
+    text-decoration: none;
+    display: grid;
+    width: 15rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--button-col);  
+}
+
+a:hover{
+    background-color: var(--button-hover-col);
+}
+
+.history-button {
+    height: 10rem;
+    width: 20rem;
+    border-radius: 0.2rem;  
+}
+
+.work-buttons-wrap {
+    display: flex;
+    justify-content: space-between;
+    transform: translateX(141%);
+    border: dotted;
+}
+
+.work-buttons {
+    height: 4rem;
+    width: 12rem;
+}

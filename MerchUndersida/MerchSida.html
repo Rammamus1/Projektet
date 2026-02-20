@@ -16,6 +16,8 @@
 
 <h2>Recommended Apparel</h2>
 
+<button onclick="sortAndRender()">Sort by Price</button>
+
 <div id="merch-display"></div>
 </div>
 
@@ -48,8 +50,19 @@ function createItems() {
     return merchList;
 } 
 
+// Sortera med pris
 function sortPrice(merchList) {
+    merchList.sort(function(a, b) {
+        return a.price - b.price;
+    });
 }
+
+// Sorterar och skriver ut
+function sortAndRender() {
+    sortPrice(aaaa);
+    printItems(aaaa);
+}
+
 
 function printItems(merchList)
 {
