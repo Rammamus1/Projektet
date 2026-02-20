@@ -8,15 +8,15 @@
     width: 87.25%;
     height: 70%;
     place-self: center;
-    border-style: dotted;
     overflow: hidden;
     position: relative;
 }
 
+/*
 .carousel-viewport{
     width: 70%;
 
-}
+}*/
 
 .carousel-track {
     display: flex;
@@ -39,7 +39,7 @@
 .arrow {
     position: absolute;
     top: 50%;
-    transform: translateY(-100%);
+    transform: translateY(-50%);
     font-size: 3rem;
     background: rgba(0,0,0,0.5);
     color: #f5f5dc;
@@ -50,13 +50,4 @@
 
 .left { left: 10px; }
 .right { right: 10px; }
-
-.work-buttons {
-    
-}
-
-.work-buttons a {
-    color: #f5f5dc;
-    text-decoration: none;
-}
 
