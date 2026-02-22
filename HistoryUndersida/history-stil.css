@@ -94,6 +94,7 @@ h1 {
     max-width: 1000px;
     margin: auto;
     padding: 40px 0;
+    margin-left: 500px;
 }
 
 .line {
@@ -140,4 +141,43 @@ transition: height 0.2s ease-out
 
 .content:hover {
     transform: scale(1.05);
+}
+
+@media(max-width: 1100px) {
+    .sidebar-box{
+        position: static;
+        width: auto;
+        margin: 20px;
+    }
+
+    .timeline {
+        margin-left: 0;
+    }
+
+    .event, .event.left, .event.right {
+        width: 100%;
+        left: 0;
+        text-align: left;
+        padding: 20px 0;
+    }
+
+    .line {
+        left:15px;
+        transform: none;
+    }
+
+    .content {
+        margin-left: 40px;
+        margin-right: 20px;
+    }
+
+    .content:hover {
+        transform: none;
+    }
+
+    h1 {
+
+        font-size: 32px;
+        padding: 20px 10px;
+    }
 }
