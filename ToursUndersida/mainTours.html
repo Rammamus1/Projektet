@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Artist Tourdatum</title>
+    <link rel="stylesheet" href="../components.css">
+    <script src="../components.js"></script>
+    <link rel="stylesheet" href="Tours.css">
+</head>
+<body>
+    <custom-navbar></custom-navbar>
+    <main>
+
+        <h1>On The Road Again Tour</h1>
+
+    <div class="controls">
+        <input type="text" id="citySearch" placeholder="Sök på stad..." onkeyup="filterTours()">
+        
+        <label for="fromDate">Från:</label>
+        <input type="date" id="fromDate">
+        
+        <label for="toDate">Till:</label>
+        <input type="date" id="toDate">
+        
+        <button onclick="filterTours()">Filtrera</button>
+        <button onclick="resetFilter()">Återställ</button>
+    </div>
+
+    <ul id="tourList"></ul>
+
+    <script>
+        const tours = [
+            { date: "2026-01-10", city: "Los Angeles", venue: "Shrine Auditorium" },
+            { date: "2025-11-05", city: "Rio de Jainero", venue: "Museu do Amanhã" },
+            { date: "2025-10-17", city: "Los Angeles", venue: "Hollywood Bowl" },
+            { date: "2025-10-14", city: "Stanford", venue: "Frost Amphitheater" },
+            { date: "2025-10-12", city: "Vancouver", venue: "Rogers Arena" },
+            { date: "2025-10-08", city: "Chicago", venue: "Huntington Bank Pavilion at Northerly Island" },
+            { date: "2025-10-03", city: "Queens, NY", venue: "Forest Hills Stadium" },
+            { date: "2025-10-01", city: "Montreal", venue: "Centre Bell" },
+            { date: "2025-09-28", city: "Toronto", venue: "Budweiser Stage" },
+            { date: "2025-09-25", city: "Boston", venue: "TD Garden" },
+            { date: "2025-08-31", city: "Munich", venue: "Olympiastadion" },
+            { date: "2025-08-28", city: "Lisbon", venue: "MEO Arena" },
+            { date: "2025-08-26", city: "Madrid", venue: "Movistar Arena" },
+            { date: "2025-08-22", city: "Rümlang", venue: "Glattbrug" },
+            { date: "2025-08-20", city: "Amsterdam", venue: "Ziggo Dome" },
+            { date: "2025-08-16", city: "London", venue: "The O2 Arena" },
+            { date: "2025-08-14", city: "St. Pölten", venue: "Green Park" },
+            { date: "2025-08-12", city: "Cologne", venue: "Lanxess Arena" },
+            { date: "2025-08-09", city: "Skanderborg", venue: "Dyrehaven" },
+            { date: "2025-08-07", city: "Budapest", venue: "Óbudai-Sziget" },
+            { date: "2025-08-05", city: "Kraków", venue: "TAURON Arena Kraków" },
+            { date: "2025-08-02", city: "Pristina", venue: "Sunny Hill Festival Park" },
+            { date: "2025-04-08", city: "San Juan", venue: "Coliseo José Miguel Agrelot" },
+            { date: "2025-04-05", city: "Alajuela", venue: "Parque Viva" },
+            { date: "2025-04-01", city: "San Miguel", venue: "Multiespacio Costa 21" },
+            { date: "2025-03-29", city: "São Paulo", venue: "Autódromo de Interlagos" },
+            { date: "2025-03-27", city: "Bogota", venue: "Parque Simón Bolívar" },
+            { date: "2025-03-23", city: "Santiago", venue: "Parque Bicentenario de Cerrillos" },
+            { date: "2025-03-22", city: "San Isidro", venue: "Flow Stage at Hipódromo de San Isidro" },
+            { date: "2025-03-08", city: "Mumbai", venue: "Mahalaxmi Race Course" }
+        ];
+
+        const tourList = document.getElementById("tourList");
+
+        function renderTours(filteredTours) {
+            tourList.innerHTML = "";
+            if (filteredTours.length === 0) {
+                tourList.innerHTML = "<li>Inga datum hittades.</li>";
+                return;
+            }
+            filteredTours.forEach(tour => {
+                const li = document.createElement("li");
+                li.innerHTML = `
+                    <div class="date">${tour.date}</div>
+                    <div><strong>${tour.city}</strong></div>
+                    <div>${tour.venue}</div>
+                `;
+                tourList.appendChild(li);
+            });
+        }
+
+        function filterTours() {
+            const cityQuery = document.getElementById("citySearch").value.toLowerCase();
+            const fromDate = document.getElementById("fromDate").value;
+            const toDate = document.getElementById("toDate").value;
+
+            const filtered = tours.filter(tour => {
+                const matchesCity = tour.city.toLowerCase().includes(cityQuery);
+                const matchesFrom = fromDate ? tour.date >= fromDate : true;
+                const matchesTo = toDate ? tour.date <= toDate : true;
+                return matchesCity && matchesFrom && matchesTo;
+            });
+
+            renderTours(filtered);
+        }
+
+        function resetFilter() {
+            document.getElementById("citySearch").value = "";
+            document.getElementById("fromDate").value = "";
+            document.getElementById("toDate").value = "";
+            renderTours(tours);
+        }
+
+        // Starta genom att visa alla
+        renderTours(tours);
+    </script>
+    
+    </main>
+    <custom-footer></custom-footer>
+</body>
+
+</html>
