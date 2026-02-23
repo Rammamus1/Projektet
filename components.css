@@ -30,6 +30,7 @@ header {
     transition: transform 0.3s ease-in-out;
     will-change: transform;
     backface-visibility: hidden;
+    z-index: 1;
 }
 .scrolled-down {
     transform: translateY(-100%);

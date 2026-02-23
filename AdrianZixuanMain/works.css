@@ -5,11 +5,13 @@
 }
 
 .carousel {
-    width: 87.25%;
+    width: 88%;
+    margin: 0 auto;
+    position: relative;
     height: 70%;
     place-self: center;
     overflow: hidden;
-    position: relative;
+    padding-inline: calc((100% - 1000rem) / 2);
 }
 
 /*
@@ -20,13 +22,13 @@
 
 .carousel-track {
     display: flex;
-    gap: 5rem;
+    gap: 5vw;
     width: 70%;
 }
 
 .carousel-image {
-    flex: 0 0 calc((100% - 2 * 3rem) / 3);
-    aspect-ratio: 1 / 1; 
+    width: calc(100vw/4.05);
+    height: calc(100vw/4.05);
     object-fit: cover;
     border-radius: 8px;
 }
@@ -49,5 +51,5 @@
 }
 
 .left { left: 10px; }
-.right { right: 10px; }
+.right { right: 14px; }
 

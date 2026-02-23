@@ -19,20 +19,49 @@ a:hover{
     background-color: var(--button-hover-col);
 }
 
-.history-button {
-    height: 10rem;
-    width: 20rem;
-    border-radius: 0.2rem;  
+.socials-button {
+    font-size: 1.1vw;
+    height: 3vw;
+    width: 15vw;
+    border-radius: 0.2rem;
+    margin-bottom: 3vw;
+}
+
+#history section .history-button {
+    height: 3vw;
+    width: 15vw;
+    border-radius: 0.2rem;
+    grid-column: 1;
+    font-size: 1.1vw;
 }
 
 .work-buttons-wrap {
     display: flex;
     justify-content: space-between;
-    transform: translateX(141%);
+    transform: translateX(35.3vw);
     border: dotted;
 }
 
 .work-buttons {
     height: 4rem;
     width: 12rem;
+    font-size: 1.1vw;
+}
+
+.tours-button{
+    height: 3vw;
+    width: 15vw;
+    border-radius: 0.2rem;
+    grid-column: 1;
+    font-size: 1.1vw;
+    margin-bottom: 5vw;
+}
+
+.merch-button{
+    height: 3vw;
+    width: 15vw;
+    border-radius: 0.2rem;
+    grid-column: 1;
+    font-size: 1.1vw;
+    margin-bottom: 5vw;
 }

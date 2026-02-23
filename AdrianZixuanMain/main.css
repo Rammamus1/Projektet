@@ -15,9 +15,41 @@ body{
     background-color: var(--background-col);    
 }
 
+.body-text{
+    font-size: 1.4vw;
+    color: var(--text-col); 
+}
+
+h1 {
+    font-size: 6vw;
+    color: var(--text-col); 
+    margin-bottom: 5vw;
+}
+
 h2 {
-    font-size: 4.5rem;
+    font-size: 4.5vw;
     color: var(--text-col);
+}
+
+h3 {
+    font-size: 3vw;
+    color: var(--text-col); 
+}
+
+#top-article hr {
+    display: block;
+    height: 3px;
+    width: 15vw;
+    border: 0;
+    border-top: 1px solid var(--text-col);
+    margin: 1em 0;
+    padding: 0;
+    margin-bottom: 1.5vw;
+}
+
+.top-article{
+    background-image: url("images/shawn-mendes-background.png");
+    background-size: auto 60vw;
 }
 
 #main-nav{
@@ -66,6 +98,13 @@ article{
     grid-template-columns: 1fr 1fr;
 }
 
+#history section .img-documentary{
+    grid-column: 2;
+    width: 40vw;
+    justify-self: center;
+    transform: translateY(-10vw);
+}
+
 #works{
     background-color: rgb(0, 82, 82);
 }
@@ -105,9 +144,75 @@ article{
 #tours{
     background-color: rgb(0, 72, 72);
 }
+
+#tours hr{
+    display: block;
+    height: 3px;
+    width: 50vw;
+    border: 0;
+    border-top: 1px solid var(--text-col);
+    margin: 1em 0;
+    padding: 0;
+    margin-bottom: 1.5vw;
+}
+
+#tours section{
+    margin-top: 4vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+#tours input{
+    margin-top: 1vw;
+    border: none;
+    background-color: rgb(0, 72, 72);
+    color: var(--text-col);
+    border-bottom: 2px solid var(--text-col);
+    outline: none;
+    padding: 0.5rem 0;
+    font-size: 1vw;
+    width: 21vw;
+}
+
+#tours input::placeholder{
+    opacity: 0.5;
+    color: var(--text-col);
+}
+
+.clear-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--text-col);
+}
+
+.signup-btn {
+    margin-top: 0.8rem;
+    padding: 0.7rem 1.2rem;
+    border-radius: 0.2rem;
+    background-color: #0f3226;
+    color: var(--text-col);
+    border: none;
+    cursor: pointer;
+}
+
 #merch{
     background-color: rgb(0, 62, 62);
 }
+
+#merch section{
+    justify-self: center;
+    width: 85vw;
+    display:grid;
+    justify-items: center;
+}
+
+#merch .body-text{
+    justify-self: left;
+}
+
 #socials{
     background-color: rgb(0, 52, 52);
 }

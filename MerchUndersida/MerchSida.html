@@ -3,26 +3,36 @@
 <meta name="viewport" charset="utf-8" lang="En" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="MerchKlass.css">
 <link rel="stylesheet" href="MerchBilagor">
+<link rel="stylesheet" href="../components.css">
+<script src="../components.js"></script>
+
 </head>
 
+
 <body>
-<div class="bakgrund-container">
+    <custom-navbar></custom-navbar>
+    <main>
+
+<div class="background-wrapper">
 <div class="container">
 <div> 
     <h1 class="unbold roboto_font">
     Shawn Mendes Store       
-</h1> </div>
+</h1> 
+</div>
 </div>
 
 <h2>Recommended Apparel</h2>
-
-<button onclick="toggleSort()">Toggle Sort by Price</button>
-
-<div id="merch-display">
-
+<div class="recommended-merch-wrapper">
 
 </div>
 
+<h3> View All </h3>
+
+<button class="button1" onclick="toggleSort()">Toggle Sort by Price</button>
+<div class="all-merch-wrapper">
+<div id="merch-display"> </div>
+</div>
 <script type = "text/javascript">
 class Item
 {
@@ -40,15 +50,15 @@ class Item
 }
 
 function createItems() {
-    merchList = []
-    merchList[0] = new Item(45.00, true, false, false, "https://shop.shawnmendesofficial.com/products/white-heart-tour-tee", "shirt 1.jpg", "WHITE HEART TOUR TEE");
-    merchList[1] = new Item(70.00, false, true, false, "https://shop.shawnmendesofficial.com/products/w-hoodie-i", "hoodie 1.jpg", "W HOODIE I");
+    let merchList = [];
+    merchList[0] = new Item(45.00, true, false, false, "https://shop.shawnmendesofficial.com/products/white-heart-tour-tee", "shirt 1.png", "WHITE HEART TOUR TEE");
+    merchList[1] = new Item(70.00, false, true, false, "https://shop.shawnmendesofficial.com/products/w-hoodie-i", "hoodie 1.png", "W HOODIE I");
     merchList[2] = new Item(60.00, false, true, false, "https://shop.shawnmendesofficial.com/products/winter-floral-02-hoodie", "hoodie 2.jpg", "WINTER FLORAL 02 HOODIE");
     merchList[3] = new Item(5.00, false, false, true, "https://shop.shawnmendesofficial.com/collections/vintage-shop/products/if-i-can-t-have-you-cd-i", "cd 1.jpg", "If I Cant Have You CD I");
     merchList[4] = new Item(13.98, false, false, true, "https://shop.shawnmendesofficial.com/collections/vintage-shop/products/shawn-mendes-cd", "cd 2.jpg", "Shawn Mendes CD");
-    merchList[5] = new Item(40.00, true, true, false, "https://shop.shawnmendesofficial.com/collections/longsleeves/products/the-tour-sketch-long-sleeve-t-shirt", "shirt 2.jpg", "THE TOUR SKETCH LONG SLEEVE T-SHIRT");
+    merchList[5] = new Item(40.00, true, true, false, "https://shop.shawnmendesofficial.com/collections/longsleeves/products/the-tour-sketch-long-sleeve-t-shirt", "shirt 2.png", "THE TOUR SKETCH LONG SLEEVE T-SHIRT");
     merchList[6] = new Item(35.00, true, false, false, "https://shop.shawnmendesofficial.com/collections/t-shirts/products/the-tour-flower-t-shirt-i", "shirt 3.jpg", "THE TOUR FLOWER T-SHIRT I");
-    merchList[7] = new Item(30.00, true, false, false, "https://shop.shawnmendesofficial.com/collections/t-shirts/products/monster-ledge-photo-t-shirt-screenprint-anniversary-edition", "shirt 4.jpg", "MONSTER LEDGE PHOTO T-SHIRT");
+    merchList[7] = new Item(30.00, true, false, false, "https://shop.shawnmendesofficial.com/collections/t-shirts/products/monster-ledge-photo-t-shirt-screenprint-anniversary-edition", "shirt 4.png", "MONSTER LEDGE PHOTO T-SHIRT");
     return merchList;
 } 
 
@@ -59,13 +69,14 @@ function sortPrice(merchList) {
     });
 }
 
-/* let originaltems();
+let originalList = createItems();
 let merchList = [...originalList];
-let sorted = False;
+let sorted = false;
 
+// toggleSort 
 function toggleSort() {
 
-    If (!sorted) {
+    if (!sorted) {
         sortPrice(merchList);
     }
     else {
@@ -73,39 +84,62 @@ function toggleSort() {
     }
     sorted = !sorted;
     printItems(merchList);
-} */
+} 
 
-function printItems(merchList)
+function printItems(list)
 {
-    displayArea = document.getElementById("merch-display");
-    let imgContent = "<div class merchList-grid>";
-    for (var i=0; i < merchList.length; i++)
+    let displayArea = document.getElementById("merch-display");
+    let imgContent = "<div class='merch-grid'>";
+
+    for (let i = 0; i < list.length; i++)
     {
         imgContent += `
         <div class="merch-item">
-            <div class="row">
-                <div class="column">
-;        <img src="MerchBilagor/${merchList[i].image}" alt="${merchList[i].name}">  </img>
+        <a href="${list[i].link}">
+                <img src="MerchBilagor/${list[i].image}" alt="${list[i].name}">
         </a>
-                
-        <p> ${merchList[i].name}</p>
-        <p>$${merchList[i].price}</p>
-                </div>
-            </div>
+            <p>${list[i].name}</p>
+            <p>$${list[i].price}</p>
+
         </div>`;
     }
+
     imgContent += "</div>";
     displayArea.innerHTML = imgContent;
 }
 
-var aaaa = createItems()
-printItems(aaaa)
+function printRecommended()
+{
+let recommendedArea = document.querySelector(".recommended-merch-wrapper");
+
+let shuffleList = [...originalList].sort(() => 0.5 - Math.random());
+
+let randomItemList = shuffleList.slice(0,3)
+
+let imgContent = "<div class='merch-grid'>"
+
+    for (let i = 0; i < randomItemList.length; i++)
+    {
+        imgContent += `
+        <div class="merch-item">
+        <a href="${randomItemList[i].link}">
+                <img src="MerchBilagor/${randomItemList[i].image}" alt="${randomItemList[i].name}">
+        </a>
+            <p>${randomItemList[i].name}</p>
+            <p>$${randomItemList[i].price}</p>
+
+        </div>`;
+    }
+recommendedArea.innerHTML = imgContent;
+}
+
+printItems(merchList);
+printRecommended();
+
 </script> 
 
-
+    </main>
+    <custom-footer></custom-footer>
 </body>
-</link>
-</link>
-</meta>
 </html>
 
