@@ -1,5 +1,5 @@
 class CustomNavbar extends HTMLElement {
-    connectedCallback() {//makes sure it runs
+    connectedCallback() { //makes sure it runs
         this.innerHTML = `
         <header id="default-header">
             <nav>
@@ -34,10 +34,10 @@ class CustomFooter extends HTMLElement {
             <span class="footer-description">
             This is a fanmade appreciation website of Shawn Mendes made as a programming assignment for us students at KTH, Royal Institute of Technology.
             </span>
-            <span>
-            <a href="https://privacy.umusic.com/terms/" class="footer-description">Terms & Conditions</a>
-            <a href="https://privacy.umusic.com/" class="footer-description">Privacy Policy</a>
-            </span>
+            <section>
+                <a href="https://privacy.umusic.com/terms/" class="footer-description">Terms & Conditions</a>
+                <a href="https://privacy.umusic.com/" class="footer-description">Privacy Policy</a>
+            </section>
         </footer>
         `
     }

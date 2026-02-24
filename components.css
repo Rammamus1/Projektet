@@ -98,14 +98,8 @@ footer{
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
-}
-
-footer a{
-    display: block;
-    margin: 0.5rem 0;
-    width: 3rem;
-    color: var(--text-col);
-    align-items: center;
+    padding-bottom: 6rem;
+    padding-top: 2rem;
 }
 
 footer span{
@@ -113,9 +107,10 @@ footer span{
     margin-bottom: 3rem;
 }
 
-.footer-description{
-    width: 50%;
-    max-width: 35rem;
-    margin-bottom: 0;
+
+footer section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
 }

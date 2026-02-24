@@ -50,6 +50,13 @@ h3 {
 .top-article{
     background-image: url("images/shawn-mendes-background.png");
     background-size: auto 60vw;
+    background-repeat:no-repeat;   
+}
+
+@media only screen and (max-width: 1900px) { /* should* be adjusted accordingly but too lazy lowk*/
+    .top-article{
+        background-size:cover;
+    }
 }
 
 #main-nav{
@@ -105,42 +112,19 @@ article{
     transform: translateY(-10vw);
 }
 
-#works{
-    background-color: rgb(0, 82, 82);
-}
-#works ol{ /* SCROLLING SNAP HAS SOME BUGS*/
-    list-style: none;
-    width: 60vw;
+ol{
     display: flex;
     flex-direction: row;
-    gap: 2rem;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    padding-inline: calc((100% - 30rem) / 2);    
+    gap: 10000rem;
+    overflow: scroll;
 }
-#works li{
-    scroll-snap-align: center;
-}
-#works div{
-    --img-container:30rem;
-    height: var(--img-container);
-    width: var(--img-container);
-    background-image: url("placeholder1200x1200.png");
-    background-size:cover;
-}
-#works ol::-webkit-scrollbar {
-  height: 10px;
-}
-#works ol::-webkit-scrollbar-track {
-  background: transparent;
-}
-#works ol::-webkit-scrollbar-thumb {
-  background-color: rgba(0,0,0,0.3);
-}
-#works ol::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(0,0,0,0.5);
-} 
 
+ol img{
+    width: 20rem;
+}
+::-webkit-scrollbar{
+    display: none;
+}
 #tours{
     background-color: rgb(0, 72, 72);
 }
@@ -213,6 +197,7 @@ article{
     justify-self: left;
 }
 
-#socials{
-    background-color: rgb(0, 52, 52);
+
+.merch-link{
+    background-color: transparent;
 }
