@@ -19,7 +19,7 @@ h2 {
 }
 
 header {
- z-index: 1000;  /*ser till så att content inte hamnar över navbaren. Sätter header (navbar) överst på sidan. */
+ z-index: 1;  /*ser till så att content inte hamnar över navbaren. Sätter header (navbar) överst på sidan. */
 }
 
 
