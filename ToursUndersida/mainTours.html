@@ -26,16 +26,40 @@
         <button onclick="resetFilter()">Återställ</button>
     </div>
 
-    <ul id="tourList"></ul>
+   
+    <div class="tour-container">
+        
+       
+        <div class="ads-column left-ads">
+            <div class="ad-box">
+                <img src="https://media.wonderlandmagazine.com/uploads/2025/08/shawnmendes-connieburke-1-15-scaled.jpg" alt="Shawn Mendes Wonderland">
+            </div>
+            <div class="ad-box">
+                <img src="https://cdn.discordapp.com/attachments/1471085017320001538/1475638974600184021/Shawn-Mendes-2-052925-74d04a793ee84b15abe9adf6dadd4504.png?ex=699e3763&is=699ce5e3&hm=3f9f6bcaa7c6d529e4e36a22b8d69ad3028ab82236351f623db378dac8110de3" alt="Shawn Mendes Promo">
+            </div>
+        </div>
+
+        <ul id="tourList"></ul>
+
+        <div class="ads-column right-ads">
+            <div class="ad-box">
+                <img src="https://cdn.discordapp.com/attachments/1471085017320001538/1475639523848359996/9bf3d58c4f5af33901dcef3484543361.png?ex=699e37e6&is=699ce666&hm=bc4ec1cfc0cef379e58723118dd1db693adf7ca929f0628ea1d17c72b86d373c&" alt="Shawn Mendes Art">
+            </div>
+            <div class="ad-box">
+                <img src="https://media.discordapp.net/attachments/1471085017320001538/1475638761487601795/44e26ff0c0b813ed08e56c8ca533a288.png?ex=699e3730&is=699ce5b0&hm=1baa97d9206e963adab1f7660600ccc55cce77257acccde7467314edf3a20982&=&format=webp&quality=lossless&width=1048&height=1862" alt="Shawn Mendes Portrait">
+            </div>
+        </div>
+        
+    </div>
 
     <script>
         const tours = [
             { date: "2026-01-10", city: "Los Angeles", venue: "Shrine Auditorium" },
-            { date: "2025-11-05", city: "Rio de Jainero", venue: "Museu do Amanhã" },
+            { date: "2025-11-05", city: "Rio de Janeiro", venue: "Museu do Amanhã" },
             { date: "2025-10-17", city: "Los Angeles", venue: "Hollywood Bowl" },
             { date: "2025-10-14", city: "Stanford", venue: "Frost Amphitheater" },
             { date: "2025-10-12", city: "Vancouver", venue: "Rogers Arena" },
-            { date: "2025-10-08", city: "Chicago", venue: "Huntington Bank Pavilion at Northerly Island" },
+            { date: "2025-10-08", city: "Chicago", venue: "Huntington Bank Pavilion" },
             { date: "2025-10-03", city: "Queens, NY", venue: "Forest Hills Stadium" },
             { date: "2025-10-01", city: "Montreal", venue: "Centre Bell" },
             { date: "2025-09-28", city: "Toronto", venue: "Budweiser Stage" },
@@ -50,15 +74,15 @@
             { date: "2025-08-12", city: "Cologne", venue: "Lanxess Arena" },
             { date: "2025-08-09", city: "Skanderborg", venue: "Dyrehaven" },
             { date: "2025-08-07", city: "Budapest", venue: "Óbudai-Sziget" },
-            { date: "2025-08-05", city: "Kraków", venue: "TAURON Arena Kraków" },
-            { date: "2025-08-02", city: "Pristina", venue: "Sunny Hill Festival Park" },
+            { date: "2025-08-05", city: "Kraków", venue: "TAURON Arena" },
+            { date: "2025-08-02", city: "Pristina", venue: "Sunny Hill Festival" },
             { date: "2025-04-08", city: "San Juan", venue: "Coliseo José Miguel Agrelot" },
             { date: "2025-04-05", city: "Alajuela", venue: "Parque Viva" },
             { date: "2025-04-01", city: "San Miguel", venue: "Multiespacio Costa 21" },
-            { date: "2025-03-29", city: "São Paulo", venue: "Autódromo de Interlagos" },
+            { date: "2025-03-29", city: "São Paulo", venue: "Autódromo Interlagos" },
             { date: "2025-03-27", city: "Bogota", venue: "Parque Simón Bolívar" },
-            { date: "2025-03-23", city: "Santiago", venue: "Parque Bicentenario de Cerrillos" },
-            { date: "2025-03-22", city: "San Isidro", venue: "Flow Stage at Hipódromo de San Isidro" },
+            { date: "2025-03-23", city: "Santiago", venue: "Parque Bicentenario" },
+            { date: "2025-03-22", city: "San Isidro", venue: "Flow Stage" },
             { date: "2025-03-08", city: "Mumbai", venue: "Mahalaxmi Race Course" }
         ];
 
@@ -67,7 +91,7 @@
         function renderTours(filteredTours) {
             tourList.innerHTML = "";
             if (filteredTours.length === 0) {
-                tourList.innerHTML = "<li>Inga datum hittades.</li>";
+                tourList.innerHTML = "<li class='no-results'>Inga datum hittades.</li>";
                 return;
             }
             filteredTours.forEach(tour => {
@@ -103,12 +127,10 @@
             renderTours(tours);
         }
 
-        // Starta genom att visa alla
         renderTours(tours);
     </script>
     
     </main>
     <custom-footer></custom-footer>
 </body>
-
 </html>
