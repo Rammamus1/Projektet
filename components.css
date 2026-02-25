@@ -107,10 +107,14 @@ footer span{
     margin-bottom: 3rem;
 }
 
-
 footer section{
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
+}
+
+.footer-description{
+    color:var(--text-col);
+    text-decoration: none;
 }

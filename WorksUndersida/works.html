@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Shawn Mendes | Verk</title>
-    <!--<link rel="stylesheet" href="../components.css">-->
+    <link rel="stylesheet" href="../components.css">
     <style>
         /* === Modern touch & hover effects === */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        nav li{
+            transform: translateY(-2px);
+        }
+
+        nav a{
+            transform: translateY(-2px);
         }
 
         body {
@@ -19,13 +27,13 @@
             line-height: 1.6;
         }
 
-        header {
+        /*header {
             background: #1d4e4e;
             color: rgb(226, 248, 243);
             padding: 40px 20px;
             text-align: center;
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
+        }*/
 
         header h1 {
             font-size: 3rem;
@@ -98,14 +106,14 @@
             cursor: default;
         }
 
-        footer {
+        /*footer {
             text-align: center;
             padding: 25px;
             background-color: #087f88;
             color: rgb(160, 214, 206);
             margin-top: 50px;
             font-size: 0.7rem;
-        }
+        }*/
 
         /* Small responsive fix */
         @media (max-width: 600px) {
@@ -116,9 +124,7 @@
 </head>
 <body>
 
-<header>
-    <h1>Album & Kända låtar</h1>
-</header>
+<custom-navbar></custom-navbar>
 
 <section>
 
