@@ -36,17 +36,16 @@ a:hover{
 }
 
 .work-buttons-wrap {
+    margin-top: 1vw;
     display: flex;
-    justify-content: space-between;
-    width: 25vw;
-    gap: 2rem;
-    margin-top: 5rem;
+    gap: 5vw;
 }
 
 .work-buttons {
     height: 4rem;
     width: 12rem;
     font-size: 1.1vw;
+    border-radius: 0.2rem;
 }
 
 .tours-button{

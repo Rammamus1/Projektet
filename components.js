@@ -9,16 +9,16 @@ class CustomNavbar extends HTMLElement {
                         <a href="../HistoryUndersida/history.html" class="nav-button">History</a>
                     </li>
                     <li>
-                        <a href="" class="nav-button">Works</a>
+                        <a href="../WorksUndersida/works.html" class="nav-button">Works</a>
                     </li>
                     <li>
-                        <a href="../mainTours.html" class="nav-button">Tours</a>
+                        <a href="../ToursUndersida/mainTours.html" class="nav-button">Tours</a>
                     </li>
                     <li>
                         <a href="../MerchUndersida/MerchSida.html" class="nav-button">Merch</a>
                     </li>                                 
                     <li>
-                        <a href="" class="nav-button">Socials</a>
+                        <a href="../SOCIIALS/social.html" class="nav-button">Socials</a>
                     </li>                                                                                                                 
                 </ul>
             </nav>     
