@@ -48,7 +48,7 @@ class Item
         this.name = name;
     }
 }
-
+// Skapar ett objekt för varenda sak som säljs
 function createItems() {
     let merchList = [];
     merchList[0] = new Item(45.00, true, false, false, "https://shop.shawnmendesofficial.com/products/white-heart-tour-tee", "shirt 1.png", "WHITE HEART TOUR TEE");
@@ -86,6 +86,7 @@ function toggleSort() {
     printItems(merchList);
 } 
 
+// Formaterar vilken info som printas ut på sidan
 function printItems(list)
 {
     let displayArea = document.getElementById("merch-display");
@@ -107,7 +108,7 @@ function printItems(list)
     imgContent += "</div>";
     displayArea.innerHTML = imgContent;
 }
-
+// Slumpar tre föremål från objekt lista och printar de ut.
 function printRecommended()
 {
 let recommendedArea = document.querySelector(".recommended-merch-wrapper");
